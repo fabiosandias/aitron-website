@@ -221,7 +221,7 @@ const HeroSection = () => {
 // Componente da Seção Sobre
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-20 bg-background">
+    <section id="sobre" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -324,7 +324,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-background">
+    <section id="beneficios" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -532,7 +532,7 @@ const Footer = () => {
 // Componente principal App
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <Header />
       <HeroSection />
       <AboutSection /> {/* Adicionado a seção Sobre */}
@@ -561,7 +561,7 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section id="parceiros" className="py-20 bg-background">
+    <section id="parceiros" className="py-20">
       <div className="container mx-auto px-4 text-center">
         <motion.p
           className="text-primary text-lg font-semibold mb-4"
@@ -595,9 +595,10 @@ const PartnersSection = () => {
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              className="bg-card p-6 rounded-lg shadow-lg flex flex-col items-center justify-center h-48"
+              className="bg-card p-6 rounded-lg shadow-lg flex flex-col items-center justify-center h-48 transition-transform"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
@@ -698,7 +699,7 @@ const GrowthSection = () => {
 // Componente "Pronto para revolucionar seu negócio?"
 const RevolutionSection = () => {
   return (
-    <section id="revolucao" className="py-20 bg-background">
+    <section id="revolucao" className="py-20">
       <div className="container mx-auto px-4 text-center">
         <motion.p
           className="text-primary text-lg font-semibold mb-4"
