@@ -92,6 +92,7 @@ const Header = () => {
           <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
           <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
           <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
+          <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">WhatsApp</a>
           <a href="#revolucao"><Button>Solicitar Orçamento</Button></a>
         </nav>
 
@@ -115,6 +116,7 @@ const Header = () => {
               <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
               <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
               <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
+              <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">WhatsApp</a>
               <a href="#revolucao"><Button className="w-full">Solicitar Orçamento</Button></a>
             </nav>
           </motion.div>
@@ -175,19 +177,23 @@ const HeroSection = () => {
           impulsionando sua eficiência e resultados.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <Button size="lg">
-            Descubra Nossas Soluções
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-          <Button size="lg" variant="outline">
-            Fale com um Especialista
-          </Button>
+          <a href="#solucoes">
+            <Button size="lg">
+              Descubra Nossas Soluções
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </a>
+          <a href="#revolucao">
+            <Button size="lg" variant="outline">
+              Fale com um Especialista
+            </Button>
+          </a>
         </motion.div>
 
         {/* Indicadores de soluções */}
@@ -458,10 +464,12 @@ const SolutionsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">
-                    Solicite uma Proposta
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  <a href="#revolucao">
+                    <Button className="w-full">
+                      Solicite uma Proposta
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </motion.div>
@@ -737,10 +745,12 @@ const RevolutionSection = () => {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <Button size="lg" className="text-lg px-8 py-3">
-            Solicitar Proposta via WhatsApp
-            <Zap className="ml-3 w-6 h-6" />
-          </Button>
+          <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="text-lg px-8 py-3">
+              Solicitar Proposta via WhatsApp
+              <Zap className="ml-3 w-6 h-6" />
+            </Button>
+          </a>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
