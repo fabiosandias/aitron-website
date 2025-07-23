@@ -125,10 +125,6 @@
   50% { transform: translateY(-20px); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8); }
-}
 
 @keyframes particle-move {
   0% { transform: translate(0, 0) rotate(0deg); }
@@ -141,9 +137,6 @@
   animation: float 6s ease-in-out infinite;
 }
 
-.pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
 
 .particle {
   animation: particle-move 20s linear infinite;

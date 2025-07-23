@@ -76,7 +76,14 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src={aitronLogo} alt="Aitron" className="w-10 h-10" />
+          <img
+            src={aitronLogo}
+            alt="Aitron"
+            className="w-10 h-10"
+            width="40"
+            height="40"
+            fetchpriority="high"
+          />
           <span className="text-2xl font-bold text-gradient">AITRON</span>
         </motion.div>
 
@@ -85,7 +92,7 @@ const Header = () => {
           <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
           <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
           <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
-          <a href="#revolucao"><Button className="pulse-glow">Solicitar Orçamento</Button></a>
+          <a href="#revolucao"><Button>Solicitar Orçamento</Button></a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -137,10 +144,13 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <img 
-            src={aitronLogo} 
-            alt="Aitron Logo" 
+          <img
+            src={aitronLogo}
+            alt="Aitron Logo"
             className="w-32 h-32 mx-auto mb-8 float-animation"
+            width="128"
+            height="128"
+            fetchpriority="high"
           />
         </motion.div>
 
@@ -171,7 +181,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <Button size="lg" className="pulse-glow">
+          <Button size="lg">
             Descubra Nossas Soluções
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
@@ -591,7 +601,12 @@ const PartnersSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <img src={partner.logo} alt={partner.name} className="max-h-24 object-contain mb-4" />
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-24 object-contain mb-4"
+                loading="lazy"
+              />
               <p className="text-lg font-semibold text-foreground">{partner.name}</p>
             </motion.div>
           ))}
@@ -721,7 +736,7 @@ const RevolutionSection = () => {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <Button size="lg" className="pulse-glow text-lg px-8 py-3">
+          <Button size="lg" className="text-lg px-8 py-3">
             Solicitar Proposta via WhatsApp
             <Zap className="ml-3 w-6 h-6" />
           </Button>
