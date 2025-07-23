@@ -93,7 +93,6 @@ const Header = () => {
           <a href="/#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
           <a href="/#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
           <a href="/#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
-          <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">WhatsApp</a>
           <a href="/#revolucao"><Button>Solicitar Orçamento</Button></a>
         </nav>
 
@@ -117,7 +116,6 @@ const Header = () => {
               <a href="/#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
               <a href="/#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
               <a href="/#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
-              <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">WhatsApp</a>
               <a href="/#revolucao"><Button className="w-full">Solicitar Orçamento</Button></a>
             </nav>
           </motion.div>
@@ -551,6 +549,7 @@ function App() {
       <GrowthSection />
       <RevolutionSection />
       <Footer />
+      <FloatingWhatsApp />
       <CookieConsent />
     </div>
   );
@@ -858,5 +857,17 @@ const CookieConsent = () => {
     </motion.div>
   );
 };
+
+// Botão flutuante do WhatsApp
+const FloatingWhatsApp = () => (
+  <a
+    href="https://wa.me/5511919235181"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600 transition-colors"
+  >
+    <MessageCircle className="w-6 h-6" />
+  </a>
+);
 
 
