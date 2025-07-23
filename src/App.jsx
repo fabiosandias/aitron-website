@@ -20,7 +20,8 @@ import {
   X,
   Lightbulb, // Adicionado para a seção Sobre
   Award, // Adicionado para a seção Sobre
-  Mail // Adicionado para o rodapé
+  Mail, // Adicionado para o rodapé
+  Whatsapp,
 } from 'lucide-react';
 import aitronLogo from './assets/aitron.png';
 import './App.css';
@@ -746,9 +747,12 @@ const RevolutionSection = () => {
           className="mb-12"
         >
           <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="text-lg px-8 py-3">
-              Solicitar Proposta via WhatsApp
-              <Zap className="ml-3 w-6 h-6" />
+            <Button
+              size="lg"
+              className="text-lg px-10 py-4 bg-green-500 text-white hover:bg-green-600 hover:scale-105 transition-transform"
+            >
+              <Whatsapp className="w-6 h-6" />
+              Solicitar uma proposta
             </Button>
           </a>
         </motion.div>
