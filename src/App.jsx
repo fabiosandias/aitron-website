@@ -748,7 +748,7 @@ const RevolutionSection = () => {
           <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="text-lg px-10 py-4 bg-green-500 text-white hover:bg-green-600 hover:scale-105 transition-transform"
+              className="h-14 px-12 text-lg hover:scale-105 transition-transform"
             >
               <MessageCircle className="w-6 h-6" />
               Solicitar uma proposta
