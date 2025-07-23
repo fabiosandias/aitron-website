@@ -43,8 +43,10 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.05 0 0); /* Fundo escuro */
+  --background: #08080d; /* Fundo escuro padrão */
   --foreground: oklch(0.95 0 0); /* Texto claro */
+  --section-a: #08080d;
+  --section-b: #0c0c12;
   --card: oklch(0.1 0 0); /* Cards escuros */
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.1 0 0);
@@ -77,7 +79,7 @@
 }
 
 .dark {
-  --background: oklch(0.05 0 0);
+  --background: #08080d;
   --foreground: oklch(0.95 0 0);
   --card: oklch(0.1 0 0);
   --card-foreground: oklch(0.95 0 0);
@@ -144,10 +146,26 @@
 
 /* Gradientes customizados */
 .gradient-bg {
-  background: linear-gradient(135deg, 
-    oklch(0.05 0 0) 0%, 
-    oklch(0.1 0.05 240) 50%, 
+  background: linear-gradient(135deg,
+    oklch(0.05 0 0) 0%,
+    oklch(0.1 0.05 240) 50%,
     oklch(0.05 0 0) 100%);
+}
+
+.bg-section-a {
+  background-color: var(--section-a);
+}
+
+.bg-section-b {
+  background-color: var(--section-b);
+}
+
+section:nth-of-type(odd):not(.gradient-bg) {
+  background-color: var(--section-a);
+}
+
+section:nth-of-type(even):not(.gradient-bg) {
+  background-color: var(--section-b);
 }
 
 .text-gradient {
