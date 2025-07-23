@@ -61,6 +61,15 @@ const Header = () => {
   const headerOpacity = useTransform(scrollY, [0, 100], [1, 0.95]);
   const headerBlur = useTransform(scrollY, [0, 100], [0, 10]);
 
+  const handleNavigation = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <motion.header 
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
@@ -89,10 +98,30 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-          <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
-          <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
-          <a href="#revolucao"><Button>Solicitar Orçamento</Button></a>
+          <a
+            href="#sobre"
+            onClick={(e) => handleNavigation(e, "sobre")}
+            className="text-foreground hover:text-primary transition-colors"
+          >
+            Sobre
+          </a>
+          <a
+            href="#solucoes"
+            onClick={(e) => handleNavigation(e, "solucoes")}
+            className="text-foreground hover:text-primary transition-colors"
+          >
+            Soluções
+          </a>
+          <a
+            href="#beneficios"
+            onClick={(e) => handleNavigation(e, "beneficios")}
+            className="text-foreground hover:text-primary transition-colors"
+          >
+            Benefícios
+          </a>
+          <a href="#revolucao" onClick={(e) => handleNavigation(e, "revolucao")}> 
+            <Button>Solicitar Orçamento</Button>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -112,10 +141,30 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
           >
             <nav className="flex flex-col space-y-4 p-4">
-              <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-              <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
-              <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
-              <a href="#revolucao"><Button className="w-full">Solicitar Orçamento</Button></a>
+              <a
+                href="#sobre"
+                onClick={(e) => handleNavigation(e, "sobre")}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Sobre
+              </a>
+              <a
+                href="#solucoes"
+                onClick={(e) => handleNavigation(e, "solucoes")}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Soluções
+              </a>
+              <a
+                href="#beneficios"
+                onClick={(e) => handleNavigation(e, "beneficios")}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Benefícios
+              </a>
+              <a href="#revolucao" onClick={(e) => handleNavigation(e, "revolucao")}> 
+                <Button className="w-full">Solicitar Orçamento</Button>
+              </a>
             </nav>
           </motion.div>
         )}
