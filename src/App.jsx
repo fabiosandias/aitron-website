@@ -21,7 +21,7 @@ import {
   Lightbulb, // Adicionado para a seção Sobre
   Award, // Adicionado para a seção Sobre
   Mail, // Adicionado para o rodapé
-  Whatsapp,
+  MessageCircle,
 } from 'lucide-react';
 import aitronLogo from './assets/aitron.png';
 import './App.css';
@@ -751,7 +751,7 @@ const RevolutionSection = () => {
               size="lg"
               className="text-lg px-10 py-4 bg-green-500 text-white hover:bg-green-600 hover:scale-105 transition-transform"
             >
-              <Whatsapp className="w-6 h-6" />
+              <MessageCircle className="w-6 h-6" />
               Solicitar uma proposta
             </Button>
           </a>
