@@ -89,11 +89,11 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-          <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
-          <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
+          <a href="/#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
+          <a href="/#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
+          <a href="/#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
           <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">WhatsApp</a>
-          <a href="#revolucao"><Button>Solicitar Orçamento</Button></a>
+          <a href="/#revolucao"><Button>Solicitar Orçamento</Button></a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -113,11 +113,11 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
           >
             <nav className="flex flex-col space-y-4 p-4">
-              <a href="#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
-              <a href="#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
-              <a href="#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
+              <a href="/#sobre" className="text-foreground hover:text-primary transition-colors">Sobre</a>
+              <a href="/#solucoes" className="text-foreground hover:text-primary transition-colors">Soluções</a>
+              <a href="/#beneficios" className="text-foreground hover:text-primary transition-colors">Benefícios</a>
               <a href="https://wa.me/5511919235181" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors">WhatsApp</a>
-              <a href="#revolucao"><Button className="w-full">Solicitar Orçamento</Button></a>
+              <a href="/#revolucao"><Button className="w-full">Solicitar Orçamento</Button></a>
             </nav>
           </motion.div>
         )}
@@ -183,13 +183,13 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a href="#solucoes">
+          <a href="/#solucoes">
             <Button size="lg">
               Descubra Nossas Soluções
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </a>
-          <a href="#revolucao">
+          <a href="/#revolucao">
             <Button size="lg" variant="outline">
               Fale com um Especialista
             </Button>
@@ -464,7 +464,7 @@ const SolutionsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href="#revolucao">
+                  <a href="/#revolucao">
                     <Button className="w-full">
                       Solicite uma Proposta
                       <ArrowRight className="ml-2 w-4 h-4" />
