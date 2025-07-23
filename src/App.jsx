@@ -149,15 +149,15 @@ const HeroSection = () => {
           <img
             src={aitronLogo}
             alt="Aitron Logo"
-            className="w-32 h-32 mx-auto mb-8 float-animation"
+            className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-8 float-animation"
             width="128"
             height="128"
             fetchpriority="high"
           />
         </motion.div>
 
-        <motion.h1 
-          className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
+        <motion.h1
+          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-gradient"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -236,7 +236,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient">
             Aitron: Pioneirismo e Inovação em Inteligência Artificial
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -339,7 +339,7 @@ const BenefitsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient">
             Resultados Reais: O Impacto da IA da Aitron
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -427,7 +427,7 @@ const SolutionsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient">
             Soluções Aitron: Inteligência Artificial Adaptada ao Seu Desafio
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -540,7 +540,7 @@ const Footer = () => {
 // Componente principal App
 function App() {
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen text-foreground overflow-x-hidden">
       <Header />
       <HeroSection />
       <AboutSection /> {/* Adicionado a seção Sobre */}
@@ -581,7 +581,7 @@ const PartnersSection = () => {
           Empresas que confiam em nosso trabalho
         </motion.p>
         <motion.h2
-          className="text-4xl md:text-5xl font-bold mb-8 text-foreground"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-foreground"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -613,7 +613,7 @@ const PartnersSection = () => {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-h-24 object-contain mb-4"
+                className="max-h-24 w-full object-contain mb-4"
                 loading="lazy"
               />
               <p className="text-lg font-semibold text-foreground">{partner.name}</p>
@@ -642,7 +642,7 @@ const GrowthSection = () => {
           viewport={{ once: true }}
         >
           <p className="text-primary text-lg font-semibold mb-4">Algumas das nossas soluções</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient">
             Impulsione o crescimento
             <br />
             sem adicionar funcionários
@@ -690,7 +690,7 @@ const GrowthSection = () => {
             className="flex justify-center items-center"
           >
             {/* Placeholder para a imagem/animação */}
-            <div className="w-full max-w-md h-96 bg-card/50 rounded-lg flex items-center justify-center">
+            <div className="w-full max-w-md h-64 md:h-80 lg:h-96 bg-card/50 rounded-lg flex items-center justify-center">
               <Brain className="w-32 h-32 text-primary/50" />
             </div>
           </motion.div>
@@ -719,7 +719,7 @@ const RevolutionSection = () => {
           Fale Conosco Agora
         </motion.p>
         <motion.h2
-          className="text-4xl md:text-5xl font-bold mb-8 text-foreground"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-foreground"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
