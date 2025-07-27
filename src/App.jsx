@@ -30,6 +30,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import aitronLogo from "./assets/aitron.png";
+import whatsappIcon from "./assets/whatsapp.svg";
 import "./App.css";
 
 // Componente de partículas animadas
@@ -584,7 +585,12 @@ const Footer = () => {
             </p>
             <p className='text-muted-foreground text-sm flex items-center space-x-2'>
               <Mail className='w-4 h-4' />
-              <span>contato@aitron.com.br</span>
+              <a
+                href='mailto:contato@aitron.com.br'
+                className='hover:underline cursor-pointer'
+              >
+                contato@aitron.com.br
+              </a>
             </p>
           </div>
 
@@ -847,7 +853,7 @@ const RevolutionSection = () => {
           className='mb-12'
         >
           <a
-            href='https://wa.me/5511919235181'
+            href='https://wa.me/5511919235181?text=Gostaria%20de%20fazer%20um%20orcamento.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -970,11 +976,12 @@ const CookieConsent = () => {
 // Botão flutuante do WhatsApp
 const FloatingWhatsApp = () => (
   <a
-    href='https://wa.me/5511919235181'
+    href='https://wa.me/5511919235181?text=Gostaria%20de%20fazer%20um%20orcamento.'
     target='_blank'
     rel='noopener noreferrer'
-    className='fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600 transition-colors'
+    className='fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600 transition-colors relative'
   >
-    <MessageCircle className='w-6 h-6' />
+    <img src={whatsappIcon} alt='WhatsApp' className='w-6 h-6' />
+    <span className='absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>1</span>
   </a>
 );
