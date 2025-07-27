@@ -703,25 +703,26 @@ const PartnersSection = () => {
 
         <div className='flex flex-wrap justify-center gap-8'>
           {partners.map((partner, index) => (
-            <motion.div
-              key={index}
-              className='bg-card p-[25px] rounded-lg shadow-lg flex flex-col items-center justify-center w-40 h-40 transition-transform'
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className='max-h-24 object-contain mb-4'
-                loading='lazy'
-              />
-              <p className='text-lg font-semibold text-foreground'>
+            <div key={index} className='flex flex-col items-center'>
+              <motion.div
+                className='bg-card p-5 rounded-lg shadow-lg flex items-center justify-center w-40 h-40 transition-transform'
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className='max-h-24 object-contain'
+                  loading='lazy'
+                />
+              </motion.div>
+              <p className='text-lg font-semibold text-foreground mt-4 text-center'>
                 {partner.name}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
