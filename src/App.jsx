@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "./components/ui/button";
 import {
@@ -168,12 +168,19 @@ const Header = () => {
 
 // Componente Hero Section
 const HeroSection = () => {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 150]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [1, 1, 0]);
 
   return (
-    <section className='relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden'>
+    <section
+      ref={heroRef}
+      className='relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden'
+    >
       <AnimatedParticles />
 
       <motion.div
