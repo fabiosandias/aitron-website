@@ -701,11 +701,11 @@ const PartnersSection = () => {
           excepcionais
         </motion.p>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className='flex flex-wrap justify-center gap-8'>
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              className='bg-card p-6 rounded-lg shadow-lg flex flex-col items-center justify-center aspect-square w-full transition-transform'
+              className='bg-card p-[25px] rounded-lg shadow-lg flex flex-col items-center justify-center w-40 h-40 transition-transform'
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
