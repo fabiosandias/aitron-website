@@ -799,11 +799,11 @@ const GrowthSection = () => {
             className='flex justify-center items-center'
           >
             {/* Placeholder para a imagem/animação */}
-            <div className='w-full max-w-md h-96 bg-card/50 rounded-lg flex items-center justify-center'>
+            <div className='w-full max-w-md h-96 bg-card/50 rounded-lg overflow-hidden'>
               <img
-                src='/public/ia.png'
+                src='/ia.png'
                 alt='IA'
-                className='w-32 h-32 object-contain'
+                className='w-full h-full object-cover'
               />
             </div>
           </motion.div>
