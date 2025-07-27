@@ -705,7 +705,7 @@ const PartnersSection = () => {
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              className='bg-card p-6 rounded-lg shadow-lg flex flex-col items-center justify-center h-48 transition-transform'
+              className='bg-card p-6 rounded-lg shadow-lg flex flex-col items-center justify-center aspect-square w-full transition-transform'
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
