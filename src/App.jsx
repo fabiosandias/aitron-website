@@ -800,7 +800,6 @@ const GrowthSection = () => {
             </div>
           </motion.div>
         </div>
-      </div>
     </section>
   );
 };
