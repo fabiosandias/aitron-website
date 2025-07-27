@@ -1,3 +1,6 @@
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
 
 a, button { cursor: pointer; }
