@@ -727,32 +727,24 @@ const PartnersSection = () => {
 const GrowthSection = () => {
   return (
     <section id='crescimento' className='py-20 gradient-bg'>
-      <div className='container mx-auto px-4'>
+      <div className='container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
         <motion.div
-          className='text-center mb-16'
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className='mb-8 md:mb-0'
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <p className='text-primary text-lg font-semibold mb-4'>
             Algumas das nossas soluções
           </p>
-          <h2 className='text-4xl md:text-5xl font-bold mb-6 text-gradient'>
+          <h2 className='text-4xl md:text-5xl font-bold mb-10 text-gradient text-left'>
             Impulsione o crescimento
             <br />
             sem adicionar funcionários
           </h2>
-        </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className='space-y-8'>
+          <div className='space-y-8'>
               <div className='flex items-start space-x-4'>
                 <ArrowRight className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
                 <div>
@@ -799,7 +791,7 @@ const GrowthSection = () => {
             className='flex justify-center items-center'
           >
             {/* Placeholder para a imagem/animação */}
-            <div className='w-full max-w-md h-96 bg-card/50 rounded-lg overflow-hidden'>
+            <div className='w-full max-w-xl h-[32rem] bg-card/50 rounded-2xl overflow-hidden shadow-xl'>
               <img
                 src='/ia.png'
                 alt='IA'
