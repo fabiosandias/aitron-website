@@ -186,9 +186,25 @@ section:nth-of-type(even):not(.gradient-bg) {
     oklch(0.6 0.15 180) 100%);
 }
 
+@keyframes wave-glow {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.8 0.2 220 / 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px oklch(0.8 0.2 220 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.8 0.2 220 / 0);
+  }
+}
+
+.wave-effect {
+  animation: wave-glow 2s infinite;
+}
+
 /* Gradiente do botão do WhatsApp */
 .whatsapp-button {
   /* Cor sólida para o botão flutuante */
-  background-color: #25d366;
+  background-color: var(--primary);
   color: var(--primary-foreground);
 }
