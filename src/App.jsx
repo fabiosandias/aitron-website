@@ -8,6 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/ui/card";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "./components/ui/accordion";
 import { Input } from "./components/ui/input";
 import { Textarea } from "./components/ui/textarea";
 import {
@@ -115,6 +121,12 @@ const Header = () => {
           >
             Benefícios
           </a>
+          <a
+            href='/#faq'
+            className='text-foreground hover:text-primary transition-colors'
+          >
+            FAQ
+          </a>
           <a href='/#revolucao'>
             <Button>Solicitar Orçamento</Button>
           </a>
@@ -154,6 +166,12 @@ const Header = () => {
                 className='text-foreground hover:text-primary transition-colors'
               >
                 Benefícios
+              </a>
+              <a
+                href='/#faq'
+                className='text-foreground hover:text-primary transition-colors'
+              >
+                FAQ
               </a>
               <a href='/#revolucao'>
                 <Button className='w-full'>Solicitar Orçamento</Button>
@@ -651,6 +669,7 @@ function App() {
       <SolutionsSection />
       <PartnersSection />
       <GrowthSection />
+      <FaqSection />
       <RevolutionSection />
       <Footer />
       <FloatingWhatsApp />
@@ -814,6 +833,147 @@ const GrowthSection = () => {
             </div>
           </motion.div>
         </div>
+    </section>
+  );
+};
+
+// Componente de Perguntas Frequentes
+const FaqSection = () => {
+  const faqs = [
+    {
+      question: "O que é automação empresarial e como ela funciona?",
+      answer:
+        "Automação empresarial é o uso de tecnologia para automatizar tarefas e processos repetitivos dentro de uma empresa, como atendimento ao cliente, envio de mensagens, geração de relatórios e integração entre sistemas. Isso reduz custos, aumenta a produtividade e melhora a experiência dos clientes.",
+    },
+    {
+      question: "Quais setores da minha empresa podem ser automatizados?",
+      answer:
+        "Setores como atendimento ao cliente, vendas, marketing, financeiro, suporte técnico, onboarding de clientes e processos internos administrativos são os mais comuns. Com IA e ferramentas como WhatsApp, n8n e CRMs, é possível automatizar boa parte da operação.",
+    },
+    {
+      question: "Preciso ter conhecimentos técnicos para usar as soluções da AI TRON?",
+      answer:
+        "Não. A AI TRON cuida de toda a parte técnica da implementação, deixando a solução pronta para uso pela sua equipe. Você recebe treinamento básico e suporte para operar com facilidade.",
+    },
+    {
+      question: "Qual o tempo médio para implantação de um projeto de automação?",
+      answer:
+        "O prazo padrão é de até 90 dias corridos, podendo variar conforme o escopo e nível de personalização solicitado no projeto.",
+    },
+    {
+      question: "O assistente virtual atende em tempo real?",
+      answer:
+        "Sim. O assistente virtual da AI TRON é projetado para responder imediatamente, 24 horas por dia, 7 dias por semana, garantindo agilidade no atendimento ao cliente.",
+    },
+    {
+      question: "A IA fala como um robô ou parece um atendente humano?",
+      answer:
+        "Nossa IA é configurada para se comportar como um atendente humano experiente, com linguagem natural, consultiva e personalizada. Inclusive, quando necessário, ela transfere para um atendente humano sem atrito.",
+    },
+    {
+      question: "A IA pode integrar com meu sistema atual?",
+      answer:
+        "Sim. Utilizamos integrações com sistemas como Bling, Asaas, Supabase, CRMs, APIs externas e plataformas de e-commerce para manter a automação conectada ao seu ambiente de trabalho.",
+    },
+    {
+      question: "A IA envia mensagens automáticas?",
+      answer:
+        "Sim. Ela pode enviar mensagens automáticas no WhatsApp com base em eventos como novos leads, datas específicas, status de pedidos, boletos em aberto e muito mais.",
+    },
+    {
+      question: "O que está incluso na implantação da IA?",
+      answer:
+        "A implantação inclui o planejamento do fluxo, desenvolvimento da IA, integrações com sistemas existentes, testes, treinamento básico da equipe e ajustes iniciais após o lançamento.",
+    },
+    {
+      question: "Vocês oferecem suporte após a entrega?",
+      answer:
+        "Sim. A mensalidade cobre manutenção da infraestrutura, suporte técnico contínuo, melhorias mensais e operação da IA. O suporte é feito via WhatsApp com atendimento humano.",
+    },
+    {
+      question: "É possível alterar o comportamento da IA após a entrega?",
+      answer:
+        "Sim. Toda IA pode ser ajustada e evoluída conforme novas necessidades surgirem. Oferecemos melhorias contínuas e opções de pacotes sob demanda.",
+    },
+    {
+      question: "Quais são os valores dos serviços?",
+      answer:
+        "O valor da implantação varia conforme o escopo, com pagamento de entrada e possibilidade de parcelamento. Também há mensalidades recorrentes a partir de R$ 2.000,00 para operação e manutenção da IA.",
+    },
+    {
+      question: "Como funciona o pagamento?",
+      answer:
+        "A entrada é paga no ato da assinatura do contrato. O saldo pode ser parcelado no cartão ou pago durante o projeto via Pix. A mensalidade começa a ser cobrada após a entrega.",
+    },
+    {
+      question: "Posso cancelar o serviço a qualquer momento?",
+      answer:
+        "Sim, mas recomendamos consultar o contrato, pois há cláusulas de fidelização e penalidades para cancelamentos antecipados. Sempre oferecemos suporte para adaptar a solução antes de encerrar.",
+    },
+    {
+      question: "Como sei se minha empresa precisa de automação?",
+      answer:
+        "Se você ou sua equipe perdem tempo com tarefas repetitivas, atendem os mesmos tipos de mensagens todos os dias, têm dificuldade em acompanhar leads ou querem escalar o atendimento sem aumentar o time, a automação pode ajudar. Fazemos uma avaliação gratuita para identificar oportunidades no seu fluxo atual.",
+    },
+    {
+      question: "A AI TRON faz diagnóstico do meu atendimento atual?",
+      answer:
+        "Sim. Durante nossa primeira reunião, analisamos sua rotina, canais de atendimento, processos internos e pontos de gargalo. A partir disso, montamos um plano de automação sob medida para sua empresa.",
+    },
+    {
+      question: "Como saber se posso contratar os serviços da AI TRON?",
+      answer:
+        "Atendemos empresas que buscam automatizar processos e melhorar o relacionamento com seus clientes. Se você possui atendimento via WhatsApp, site, CRM ou vendas online, provavelmente já pode se beneficiar das nossas soluções. Basta agendar uma conversa e faremos uma análise do seu cenário.",
+    },
+    {
+      question: "Preciso ter CNPJ para contratar?",
+      answer:
+        "Não é obrigatório, mas é recomendado. Atendemos tanto pequenos negócios quanto empresas maiores. A exigência pode variar dependendo do tipo de integração necessária e das ferramentas utilizadas.",
+    },
+    {
+      question: "Como posso marcar uma reunião com a AI TRON?",
+      answer:
+        "Você pode agendar uma reunião diretamente pelo WhatsApp ou pelo formulário de contato no site. Também disponibilizamos um link de agendamento online com horários disponíveis. A reunião é gratuita e feita por videoconferência.",
+    },
+    {
+      question: "Preciso de alguma informação antes de marcar a reunião?",
+      answer:
+        "Se possível, tenha em mente quais são os principais desafios que enfrenta hoje no seu atendimento ou nos seus processos internos. Mas não se preocupe: nossa equipe ajuda a mapear tudo durante a conversa.",
+    },
+  ];
+
+  return (
+    <section id='faq' className='py-20'>
+      <div className='container mx-auto px-4'>
+        <motion.div
+          className='text-center mb-16'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className='text-4xl md:text-5xl font-bold mb-6 text-gradient'>
+            Perguntas Frequentes
+          </h2>
+        </motion.div>
+
+        <Accordion
+          type='single'
+          collapsible
+          className='grid grid-cols-1 md:grid-cols-2 gap-8'
+        >
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`faq-${index}`}>
+              <AccordionTrigger className='text-left text-lg'>
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className='text-muted-foreground'>
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
     </section>
   );
 };
