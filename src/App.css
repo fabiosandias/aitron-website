@@ -169,11 +169,28 @@ section:nth-of-type(even):not(.gradient-bg) {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, 
-    oklch(0.7 0.15 200) 0%, 
-    oklch(0.8 0.2 220) 50%, 
+  background: linear-gradient(135deg,
+    oklch(0.7 0.15 200) 0%,
+    oklch(0.8 0.2 220) 50%,
     oklch(0.6 0.15 180) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Gradiente aplicado a botões */
+.gradient-button {
+  background: linear-gradient(135deg,
+    oklch(0.7 0.15 200) 0%,
+    oklch(0.8 0.2 220) 50%,
+    oklch(0.6 0.15 180) 100%);
+}
+
+/* Gradiente do botão do WhatsApp */
+.whatsapp-button {
+  background: linear-gradient(135deg,
+    oklch(0.7 0.15 200) 0%,
+    oklch(0.8 0.2 220) 50%,
+    oklch(0.6 0.15 180) 100%);
+  color: var(--primary-foreground);
 }
