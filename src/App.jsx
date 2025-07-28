@@ -634,6 +634,9 @@ const Footer = () => {
           <p className='text-muted-foreground text-xs'>
             Desenvolvido com tecnologia de ponta para impulsionar seu negócio.
           </p>
+          <p className='mt-2'>
+            <a href='/termos' className='text-blue-500 hover:underline'>Termos e Condições</a>
+          </p>
         </div>
       </div>
     </footer>
@@ -967,15 +970,15 @@ const CookieConsent = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
       transition={{ duration: 0.5 }}
-      className='fixed bottom-24 md:bottom-16 left-4 right-4 bg-card p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between z-50'
+      className='fixed bottom-32 md:bottom-24 left-4 right-4 bg-card p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between z-50'
     >
       <p className='text-sm text-muted-foreground mb-4 md:mb-0 md:mr-4'>
         Utilizamos cookies para melhorar sua experiência de navegação e analisar
-        o tráfego do site. Ao continuar, você concorda com nossa política de
-        privacidade.
+        o tráfego do site. Ao continuar, você concorda com nossa
+        <a href='/termos' className='text-blue-500 underline ml-1'>política de privacidade e termos</a>.
       </p>
       <Button onClick={handleAccept} className='whitespace-nowrap'>
-        Aceitar Cookies
+        Aceitar Todos
       </Button>
     </motion.div>
   );
