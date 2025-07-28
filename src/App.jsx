@@ -30,7 +30,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import aitronLogo from "./assets/aitron.png";
-import whatsappIcon from "./assets/whatsapp.svg";
+import { WhatsappIcon } from "./components/whatsapp-icon";
 import "./App.css";
 
 // Componente de partículas animadas
@@ -993,6 +993,6 @@ const FloatingWhatsApp = () => (
     aria-label='Conversar no WhatsApp'
     className='fixed bottom-6 right-6 z-50 flex items-center justify-center whatsapp-button rounded-full w-14 h-14 shadow-xl'
   >
-    <img src={whatsappIcon} alt='WhatsApp' className='w-7 h-7' />
+    <WhatsappIcon className='w-7 h-7' />
   </a>
 );
