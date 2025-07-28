@@ -19,7 +19,8 @@ const Header = () => {
       }}
     >
       <div className='container mx-auto px-4 py-4 flex items-center justify-between'>
-        <motion.div
+        <motion.a
+          href='/#home'
           className='flex items-center space-x-3'
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -34,10 +35,10 @@ const Header = () => {
             fetchpriority='high'
           />
           <span className='text-2xl font-bold text-gradient'>AITRON</span>
-        </motion.div>
+        </motion.a>
 
         <nav className='hidden md:flex items-center space-x-8'>
-          <a href='/' className='text-foreground hover:text-primary transition-colors'>Home</a>
+          <a href='/#home' className='text-foreground hover:text-primary transition-colors'>Home</a>
         </nav>
 
         <button className='md:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -52,7 +53,7 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
           >
             <nav className='flex flex-col space-y-4 p-4'>
-              <a href='/' className='text-foreground hover:text-primary transition-colors'>Home</a>
+              <a href='/#home' className='text-foreground hover:text-primary transition-colors'>Home</a>
             </nav>
           </motion.div>
         )}
@@ -117,15 +118,20 @@ const CookieConsent = () => {
 };
 
 const FloatingWhatsApp = () => (
-  <a
+  <motion.a
     href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
     className='fixed bottom-6 right-6 z-50 flex items-center justify-center whatsapp-button rounded-full w-14 h-14 shadow-xl'
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ duration: 0.6 }}
   >
     <WhatsappIcon className='w-7 h-7' />
-  </a>
+  </motion.a>
 );
 
 function Terms() {
