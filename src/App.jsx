@@ -179,7 +179,7 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className='relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden'
+      className='relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden pt-24 md:pt-0'
     >
       <AnimatedParticles />
 
@@ -643,7 +643,7 @@ const Footer = () => {
 // Componente principal App
 function App() {
   return (
-    <div className='min-h-screen text-foreground'>
+    <div className='min-h-screen text-foreground overflow-x-hidden'>
       <Header />
       <HeroSection />
       <AboutSection /> {/* Adicionado a seção Sobre */}
@@ -969,7 +969,7 @@ const CookieConsent = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
       transition={{ duration: 0.5 }}
-      className='fixed bottom-4 left-4 right-4 bg-card p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between z-50'
+      className='fixed bottom-24 md:bottom-4 left-4 right-4 bg-card p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between z-50'
     >
       <p className='text-sm text-muted-foreground mb-4 md:mb-0 md:mr-4'>
         Utilizamos cookies para melhorar sua experiência de navegação e analisar
