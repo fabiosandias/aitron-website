@@ -207,4 +207,10 @@ section:nth-of-type(even):not(.gradient-bg) {
   /* Cor sólida para o botão do WhatsApp */
   background-color: #25d366;
   color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
 }
