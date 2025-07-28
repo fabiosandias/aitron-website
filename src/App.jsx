@@ -864,12 +864,10 @@ const RevolutionSection = () => {
             href='https://wa.me/5511919235181?text=Gostaria%20de%20fazer%20um%20orcamento.'
             target='_blank'
             rel='noopener noreferrer'
-            className='relative inline-flex items-center justify-center'
           >
-            <span className='absolute inline-flex h-full w-full rounded-lg bg-primary/75 animate-ping'></span>
             <Button
               size='lg'
-              className='relative h-14 px-12 text-lg hover:scale-105 transition-transform'
+              className='relative h-14 px-12 text-lg hover:scale-105 transition-transform gradient-button text-primary-foreground'
             >
               <MessageCircle className='w-6 h-6' />
               Solicitar uma proposta
@@ -985,20 +983,13 @@ const CookieConsent = () => {
 
 // Botão flutuante do WhatsApp
 const FloatingWhatsApp = () => (
-  <motion.a
+  <a
     href='https://wa.me/5511919235181?text=Gostaria%20de%20fazer%20um%20orcamento.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
-    initial={{ y: 80, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    whileHover={{ scale: 1.1 }}
-    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    className='fixed bottom-6 right-6 z-50 flex items-center justify-center'
+    className='fixed bottom-6 right-6 z-50 flex items-center justify-center whatsapp-button rounded-full w-14 h-14 shadow-xl'
   >
-    <span className='absolute inline-flex h-14 w-14 rounded-full bg-green-500/75 animate-ping'></span>
-    <span className='relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-xl'>
-      <img src={whatsappIcon} alt='WhatsApp' className='w-7 h-7' />
-    </span>
-  </motion.a>
+    <img src={whatsappIcon} alt='WhatsApp' className='w-7 h-7' />
+  </a>
 );
