@@ -635,7 +635,7 @@ const Footer = () => {
             Desenvolvido com tecnologia de ponta para impulsionar seu negócio.
           </p>
           <p className='mt-2'>
-            <a href='/termos' className='text-blue-500 hover:underline'>Termos e Condições</a>
+            <a href='/termos' className='text-primary hover:underline'>Termos e Condições</a>
           </p>
         </div>
       </div>
@@ -975,7 +975,7 @@ const CookieConsent = () => {
       <p className='text-sm text-muted-foreground mb-4 md:mb-0 md:mr-4'>
         Utilizamos cookies para melhorar sua experiência de navegação e analisar
         o tráfego do site. Ao continuar, você concorda com nossa
-        <a href='/termos' className='text-blue-500 underline ml-1'>política de privacidade e termos</a>.
+        <a href='/termos' className='text-primary underline ml-1'>política de privacidade e termos</a>.
       </p>
       <Button onClick={handleAccept} className='whitespace-nowrap'>
         Aceitar Todos
