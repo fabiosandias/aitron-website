@@ -204,7 +204,7 @@ section:nth-of-type(even):not(.gradient-bg) {
 
 /* Gradiente do botão do WhatsApp */
 .whatsapp-button {
-  /* Cor sólida para o botão flutuante */
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  /* Cor sólida para o botão do WhatsApp */
+  background-color: #25d366;
+  color: #fff;
 }
