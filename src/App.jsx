@@ -179,7 +179,7 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className='relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden pt-24 md:pt-0'
+      className='relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden pt-24'
     >
       <AnimatedParticles />
 
@@ -204,7 +204,7 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.h1
-          className='text-5xl md:text-7xl font-bold mb-6 text-gradient'
+          className='text-[47px] md:text-[71px] font-bold mb-6 text-gradient'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -215,7 +215,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className='text-xl md:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto'
+          className='text-[21.5px] md:text-[26px] mb-8 text-muted-foreground max-w-3xl mx-auto'
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
