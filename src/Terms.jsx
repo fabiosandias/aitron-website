@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "./components/ui/button";
 import aitronLogo from "./assets/aitron.png";
-import whatsappIcon from "./assets/whatsapp.svg";
+import { WhatsappIcon } from "./components/whatsapp-icon";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -124,7 +124,7 @@ const FloatingWhatsApp = () => (
     aria-label='Conversar no WhatsApp'
     className='fixed bottom-6 right-6 z-50 flex items-center justify-center whatsapp-button rounded-full w-14 h-14 shadow-xl'
   >
-    <img src={whatsappIcon} alt='WhatsApp' className='w-7 h-7' />
+    <WhatsappIcon className='w-7 h-7' />
   </a>
 );
 
