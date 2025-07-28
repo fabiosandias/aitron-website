@@ -118,7 +118,7 @@ const CookieConsent = () => {
 
 const FloatingWhatsApp = () => (
   <a
-    href='https://wa.me/5511919235181?text=Gostaria%20de%20fazer%20um%20orcamento.'
+    href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
