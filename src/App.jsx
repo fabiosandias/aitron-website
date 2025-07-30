@@ -180,7 +180,7 @@ const HeroSection = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ['start start', 'end start'],
+    offset: ["start start", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [1, 1, 0]);
@@ -645,7 +645,9 @@ const Footer = () => {
             Desenvolvido com tecnologia de ponta para impulsionar seu negócio.
           </p>
           <p className='mt-2'>
-            <a href='/termos' className='text-primary hover:underline'>Termos e Condições</a>
+            <a href='/termos' className='text-primary hover:underline'>
+              Termos e Condições
+            </a>
           </p>
         </div>
       </div>
@@ -750,7 +752,7 @@ const PartnersSection = () => {
   );
 };
 
-// Componente de Crescimento (Impulsione o crescimento sem adicionar funcionários)
+// Componente de Crescimento (Impulsione o crescimento sem adicionar funcionários) teste
 const GrowthSection = () => {
   return (
     <section id='crescimento' className='py-20 gradient-bg'>
@@ -772,61 +774,59 @@ const GrowthSection = () => {
           </h2>
 
           <div className='space-y-8'>
-              <div className='flex items-start space-x-4'>
-                <ArrowRight className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
-                <div>
-                  <h3 className='text-2xl font-semibold mb-2'>
-                    Múltiplos Agentes IA
-                  </h3>
-                  <p className='text-muted-foreground'>
-                    Tenha um time de agentes especializados em cada etapa do seu
-                    negócio, interagindo entre si para alcançar resultados
-                    extraordinários. Cada agente pode ter seu próprio modelo,
-                    aprendendo continuamente e operando os seus softwares.
-                  </p>
-                </div>
-              </div>
-              <div className='flex items-start space-x-4'>
-                <Zap className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
-                <div>
-                  <h3 className='text-2xl font-semibold mb-2'>
-                    Agentes Copilot
-                  </h3>
-                  <p className='text-muted-foreground'>
-                    Suporte inteligente imediato.
-                  </p>
-                </div>
-              </div>
-              <div className='flex items-start space-x-4'>
-                <Brain className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
-                <div>
-                  <h3 className='text-2xl font-semibold mb-2'>
-                    Sua IA localmente
-                  </h3>
-                  <p className='text-muted-foreground'>
-                    Rodando IA com total controle.
-                  </p>
-                </div>
+            <div className='flex items-start space-x-4'>
+              <ArrowRight className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
+              <div>
+                <h3 className='text-2xl font-semibold mb-2'>
+                  Múltiplos Agentes IA
+                </h3>
+                <p className='text-muted-foreground'>
+                  Tenha um time de agentes especializados em cada etapa do seu
+                  negócio, interagindo entre si para alcançar resultados
+                  extraordinários. Cada agente pode ter seu próprio modelo,
+                  aprendendo continuamente e operando os seus softwares.
+                </p>
               </div>
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className='flex justify-center items-center'
-          >
-            {/* Placeholder para a imagem/animação */}
-            <div className='w-full max-w-xl h-[32rem] bg-card/50 rounded-2xl overflow-hidden shadow-xl'>
-              <img
-                src='/ia.png'
-                alt='IA'
-                className='w-full h-full object-cover'
-              />
+            <div className='flex items-start space-x-4'>
+              <Zap className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
+              <div>
+                <h3 className='text-2xl font-semibold mb-2'>Agentes Copilot</h3>
+                <p className='text-muted-foreground'>
+                  Suporte inteligente imediato.
+                </p>
+              </div>
             </div>
-          </motion.div>
-        </div>
+            <div className='flex items-start space-x-4'>
+              <Brain className='w-8 h-8 text-primary flex-shrink-0 mt-1' />
+              <div>
+                <h3 className='text-2xl font-semibold mb-2'>
+                  Sua IA localmente
+                </h3>
+                <p className='text-muted-foreground'>
+                  Rodando IA com total controle.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className='flex justify-center items-center'
+        >
+          {/* Placeholder para a imagem/animação */}
+          <div className='w-full max-w-xl h-[32rem] bg-card/50 rounded-2xl overflow-hidden shadow-xl'>
+            <img
+              src='/ia.png'
+              alt='IA'
+              className='w-full h-full object-cover'
+            />
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };
@@ -985,7 +985,10 @@ const CookieConsent = () => {
       <p className='text-sm text-muted-foreground mb-4 md:mb-0 md:mr-4'>
         Utilizamos cookies para melhorar sua experiência de navegação e analisar
         o tráfego do site. Ao continuar, você concorda com nossa
-        <a href='/termos' className='text-primary underline ml-1'>política de privacidade e termos</a>.
+        <a href='/termos' className='text-primary underline ml-1'>
+          política de privacidade e termos
+        </a>
+        .
       </p>
       <Button onClick={handleAccept} className='whitespace-nowrap'>
         Aceitar Todos
