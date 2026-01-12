@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "./components/ui/button";
 import aitronLogo from "./assets/aitron.png";
@@ -39,9 +39,10 @@ const Header = () => {
 
         <nav className='hidden md:flex items-center space-x-8'>
           <a href='/#home' className='text-foreground hover:text-primary transition-colors'>Home</a>
+          <a href='/politica-privacidade' className='text-foreground hover:text-primary transition-colors'>Privacidade</a>
         </nav>
 
-        <button className='md:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className='md:hidden text-foreground' onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? "X" : "Menu"}
         </button>
 
@@ -54,6 +55,7 @@ const Header = () => {
           >
             <nav className='flex flex-col space-y-4 p-4'>
               <a href='/#home' className='text-foreground hover:text-primary transition-colors'>Home</a>
+              <a href='/politica-privacidade' className='text-foreground hover:text-primary transition-colors'>Privacidade</a>
             </nav>
           </motion.div>
         )}
@@ -71,55 +73,29 @@ const Footer = () => {
           <span className='text-2xl font-bold text-gradient'>AI TRON</span>
         </div>
         <div className='text-center border-t border-border pt-8'>
-          <p className='text-muted-foreground text-sm mb-2'>© 2024 AI TRON. Todos os direitos reservados.</p>
-          <p className='text-muted-foreground text-xs'>Desenvolvido com tecnologia de ponta para impulsionar seu negócio.</p>
-          <p className='mt-2'>
-            <a href='/termos' className='text-primary hover:underline'>Termos e Condições</a>
-          </p>
+          <p className='text-muted-foreground text-sm mb-2'>© 2026 AI TRON. Todos os direitos reservados.</p>
+          <p className='text-muted-foreground text-xs mb-4'>Desenvolvido com tecnologia de ponta para impulsionar seu negócio.</p>
+          
+          <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
+            <p><strong>Razão Social:</strong> FABIO SANTOS DIAS (ME)</p>
+            <p><strong>CNPJ:</strong> 12.637.261/0001-67</p>
+            <p><strong>Endereço:</strong> R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171</p>
+            <p><strong>E-mail:</strong> contato@airtron.com.br</p>
+          </div>
+
+          <div className='flex justify-center space-x-4'>
+            <a href='/termos' className='text-primary hover:underline'>Termos de Uso</a>
+            <a href='/politica-privacidade' className='text-primary hover:underline'>Política de Privacidade</a>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
 
-const CookieConsent = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem("cookie_consent");
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
-
-  const handleAccept = () => {
-    localStorage.setItem("cookie_consent", "accepted");
-    setIsVisible(false);
-  };
-
-  if (!isVisible) {
-    return null;
-  }
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 100 }}
-      transition={{ duration: 0.5 }}
-      className='fixed bottom-32 md:bottom-24 left-4 right-4 bg-card p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between z-50'
-    >
-      <p className='text-sm text-muted-foreground mb-4 md:mb-0 md:mr-4'>
-        Utilizamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. Ao continuar, você concorda com nossa <a href='/termos' className='text-primary underline'>política de privacidade e termos</a>.
-      </p>
-      <Button onClick={handleAccept} className='whitespace-nowrap'>Aceitar Todos</Button>
-    </motion.div>
-  );
-};
-
 const FloatingWhatsApp = () => (
   <motion.a
-    href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
+    href='https://wa.me/55119962684780?text=Olá, desejo saber mais sobre as soluções de IA da Aitron.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
@@ -130,56 +106,116 @@ const FloatingWhatsApp = () => (
     whileTap={{ scale: 0.95 }}
     transition={{ duration: 0.6 }}
   >
-    <WhatsappIcon className='w-7 h-7' />
+    <div className='relative flex items-center justify-center'>
+      <WhatsappIcon className='w-7 h-7' />
+    </div>
   </motion.a>
 );
 
 function Terms() {
   return (
-    <div className='min-h-screen text-foreground overflow-x-hidden'>
+    <div className='min-h-screen bg-background text-foreground overflow-x-hidden'>
       <Header />
-      <main className='container mx-auto px-4 pt-32 pb-20 space-y-6'>
-        <h1 className='text-3xl font-bold mb-6'>Termos e Condições</h1>
-        <div className='prose max-w-none'>
-          <p><strong>Termos de Uso do Site AI TRON</strong></p>
-          <p><strong>1. Aceitação</strong><br />Ao acessar ou utilizar o site https://aitron.com.br/ (o “Site”), você declara que leu, compreendeu e concorda com estes Termos de Uso e com a Política de Privacidade. Se você não concorda com estes termos, não utilize o Site.</p>
-          <p><strong>2. Definições</strong><br />AI TRON ou Empresa: AI TRON, pessoa jurídica proprietária do Site.<br />Usuário(s): qualquer pessoa que acesse ou utilize o Site.<br />Conteúdo: todo material disponibilizado no Site, incluindo textos, imagens, vídeos, gráficos e software.</p>
-          <p><strong>3. Uso do Site</strong><br />3.1. O Usuário compromete-se a utilizar o Site apenas para fins lícitos e de acordo com estes Termos.<br />3.2. É vedado ao Usuário:<br />(a) publicar, transmitir ou disseminar conteúdo ilegal, ofensivo, difamatório ou que viole direitos de terceiros;<br />(b) tentar obter acesso não autorizado a sistemas ou áreas restritas do Site;<br />(c) utilizar o Site para enviar spam ou mensagens não solicitadas.</p>
-          <p><strong>4. Propriedade Intelectual</strong><br />Todo o Conteúdo do Site é de propriedade da AI TRON ou de terceiros licenciantes. O uso do Conteúdo é permitido apenas para fins pessoais e informativos. A reprodução, distribuição ou modificação do Conteúdo sem autorização prévia é proibida.</p>
-          <p><strong>5. Responsabilidades do Usuário</strong><br />O Usuário é responsável por:<br />garantir a veracidade das informações fornecidas;<br />manter a confidencialidade de suas credenciais de acesso (quando aplicável);<br />não causar danos ao Site ou a sistemas relacionados.</p>
-          <p><strong>6. Links de Terceiros</strong><br />O Site pode conter links para sites de terceiros. A AI TRON não se responsabiliza pelo conteúdo ou pelas práticas desses sites.</p>
-          <p><strong>7. Privacidade e Proteção de Dados</strong><br />A coleta, o uso e o armazenamento de dados pessoais são regidos pela Política de Privacidade. O Usuário declara estar ciente de que a AI TRON poderá coletar dados pessoais e usar cookies, conforme descrito na política.</p>
-          <p><strong>8. Isenção de Garantias</strong><br />O Site e seu Conteúdo são fornecidos “como estão”. A AI TRON não garante que o Site funcionará de forma ininterrupta ou livre de erros, nem que seu conteúdo seja totalmente atualizado ou livre de falhas.</p>
-          <p><strong>9. Limitação de Responsabilidade</strong><br />Na máxima extensão permitida pela legislação aplicável, a AI TRON não será responsável por danos indiretos, incidentais ou consequentes decorrentes do uso ou da impossibilidade de uso do Site.</p>
-          <p><strong>10. Alterações</strong><br />A AI TRON poderá alterar estes Termos de Uso a qualquer momento. O Usuário será notificado sobre mudanças significativas e deverá revisar o documento periodicamente.</p>
-          <p><strong>11. Lei Aplicável e Foro</strong><br />Estes Termos são regidos pelas leis da República Federativa do Brasil. Qualquer controvérsia será submetida ao foro da comarca de Guarulhos/SP, com renúncia a qualquer outro.</p>
-          <p><strong>12. Contato</strong><br />Em caso de dúvidas sobre estes Termos, entre em contato pelo e-mail privacidade@aitron.com.br (ou outro canal indicado pela empresa).</p>
-          <p><strong>Política de Privacidade e Cookies da AI TRON</strong></p>
-          <p><strong>1. Introdução</strong><br />A AI TRON se compromete a proteger a privacidade dos Usuários e a cumprir a Lei Geral de Proteção de Dados (LGPD) – Lei nº 13.709/2018. Esta política descreve quais dados pessoais são coletados, como são utilizados e quais são os direitos dos titulares.</p>
-          <p><strong>2. Definições (LGPD)</strong><br />De acordo com o art. 5º da LGPD:<br />Dados pessoais são informações relacionadas a pessoa natural identificada ou identificável.<br />Dados pessoais sensíveis incluem dados sobre origem racial/étnica, convicção religiosa, opinião política, saúde, vida sexual, dados genéticos/biométricos.<br />Controlador é a pessoa ou empresa que toma as decisões sobre o tratamento de dados.<br />Operador é quem realiza o tratamento em nome do controlador.<br />Titular é a pessoa a quem se referem os dados.<br />Tratamento é toda operação com dados pessoais, como coleta, armazenamento, uso, transferência ou eliminação.<br />Consentimento é a manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados para uma finalidade determinada.</p>
-          <p><strong>3. Dados que Coletamos</strong><br />Dados fornecidos voluntariamente: nome, e-mail, telefone, empresa e outras informações inseridas em formulários de contato ou orçamentos.<br />Dados coletados automaticamente: endereço IP, tipo de navegador, dispositivo, páginas acessadas e tempo de visita.<br />Dados de cookies e tecnologias semelhantes, que registram preferências de navegação, desempenho e publicidade.</p>
-          <p><strong>4. Formas de Coleta</strong><br />Formulários no Site: quando o Usuário preenche campos para solicitar um orçamento, inscrever-se em newsletters ou enviar mensagens.<br />Cookies e ferramentas analíticas: utilizados para melhorar a experiência de navegação, medir audiência e personalizar conteúdos (ver seção 8).</p>
-          <p><strong>5. Finalidades de Uso</strong><br />Os dados coletados poderão ser utilizados para:<br />Responder a solicitações e prestar serviços;<br />Personalizar a experiência do Usuário e enviar conteúdos relevantes;<br />Analisar estatísticas de acesso e melhorar o Site;<br />Enviar comunicações de marketing, desde que o Usuário tenha consentido;<br />Cumprir obrigações legais ou regulatórias.</p>
-          <p><strong>6. Bases Legais</strong><br />O tratamento de dados pessoais ocorrerá conforme as hipóteses do art. 7º da LGPD, em especial:<br />Consentimento do titular (art. 7º, I) – para envio de marketing e uso de cookies não essenciais;<br />Legítimo interesse (art. 7º, IX) – para cookies essenciais e melhorias do Site;<br />Execução de contrato (art. 7º, V) – para comunicação com clientes que solicitam orçamento.</p>
-          <p><strong>7. Compartilhamento de Dados</strong><br />Os dados poderão ser compartilhados com:<br />Prestadores de serviços (hospedagem, sistemas de CRM, parceiros de publicidade e análise) que atuam como operadores e seguem nossas instruções;<br />Terceiros autorizados, quando necessário para cumprimento de obrigações legais ou ordens judiciais;<br />Parceiros de publicidade, como Google e outras redes, para veiculação de anúncios personalizados.</p>
-          <p><strong>8. Cookies</strong></p>
-          <p><strong>8.1 O que são cookies?</strong><br />Cookies são pequenos arquivos de texto armazenados no dispositivo do Usuário quando ele visita um site. Eles registram informações sobre a interação do Usuário com o site, permitindo lembrar preferências, personalizar conteúdo e analisar tráfego.</p>
-          <p><strong>8.2 Por que utilizamos cookies?</strong><br />Os cookies são usados para otimizar a experiência de navegação e melhorar a funcionalidade do Site. Eles ajudam a entender como os Usuários utilizam o site, identificando padrões e permitindo ajustes. O Usuário pode gerenciar ou bloquear cookies a qualquer momento nas configurações do navegador.</p>
-          <p><strong>8.3 Tipos de cookies utilizados</strong><br />Essenciais: necessários para o funcionamento do Site, como autenticação em áreas restritas. Base legal: art. 7º, IX, da LGPD.<br />Analíticos: permitem analisar o desempenho do Site e identificar páginas mais visitadas. Utilizados apenas para estatísticas sem coletar informações pessoais.<br />Funcionalidade: armazenam preferências do Usuário para proporcionar experiência personalizada (ex.: lembrar login).<br />Terceiros: cookies de serviços externos que medem a eficácia de aplicativos e publicidade.<br />Publicidade: direcionam anúncios de acordo com os interesses do Usuário e limitam o número de vezes que um anúncio é exibido.</p>
-          <p><strong>8.4 Cookies de terceiros e Google</strong><br />Conforme as diretrizes do Google, informamos que terceiros, incluindo o Google, utilizam cookies para exibir anúncios baseados em visitas anteriores ao nosso site. O uso desses cookies permite que o Google e seus parceiros exibam anúncios com base nas visitas feitas pelos Usuários. O Usuário pode optar por não receber publicidade personalizada acessando Configurações de anúncios do Google ou visitando a página aboutads.info para optar por não receber cookies de outros fornecedores.</p>
-          <p><strong>8.5 Banner de cookies e consentimento</strong><br />De acordo com a orientação da ANPD, implementaremos:<br />Banner de nível 1: exibido na primeira visita, permitindo ao Usuário aceitar ou rejeitar os cookies não essenciais. O botão de aceitação não será mais destacado do que o de rejeição, e haverá link para um painel de preferências.<br />Painel de preferências (banner de nível 2): possibilitará ao Usuário aprovar ou rejeitar cada categoria de cookies não essenciais. Os cookies não essenciais serão rejeitados por padrão.<br />O Usuário poderá alterar suas preferências a qualquer momento e retirar o consentimento de forma fácil.</p>
-          <p><strong>9. Direitos dos Titulares</strong><br />Os titulares de dados pessoais têm, dentre outros, os direitos previstos no art. 18 da LGPD:<br />Confirmação e acesso: saber se seus dados são tratados e acessar os dados coletados;<br />Correção: solicitar correção de dados incompletos, inexatos ou desatualizados;<br />Anonimização, bloqueio ou eliminação: requerer anonimização ou eliminação de dados desnecessários ou excessivos;<br />Portabilidade: solicitar portabilidade dos dados a outro fornecedor, observados segredos comercial e industrial;<br />Eliminação: pedir a eliminação dos dados pessoais tratados com consentimento;<br />Informação de compartilhamento: obter informações das entidades públicas e privadas com as quais o controlador compartilhou dados;<br />Revogação do consentimento: revogar o consentimento a qualquer momento;<br />Informação sobre as consequências da recusa em consentir.</p>
-          <p>Para exercer esses direitos, o titular deve enviar solicitação para privacidade@aitron.com.br (ou outro canal indicado pela empresa), sendo que poderemos solicitar comprovação de identidade para evitar fraudes.</p>
-          <p><strong>10. Segurança dos Dados</strong><br />A AI TRON adota medidas técnicas e administrativas para proteger os dados pessoais contra acessos não autorizados, perda, alteração ou divulgação indevida, em conformidade com os princípios de segurança e prevenção previstos na LGPD.</p>
-          <p><strong>11. Retenção de Dados</strong><br />Os dados pessoais são armazenados somente pelo tempo necessário ao cumprimento das finalidades descritas ou conforme exigido por lei. Após atingida a finalidade, os dados serão eliminados ou anonimizados, salvo obrigação legal de retenção.</p>
-          <p><strong>12. Transferências Internacionais</strong><br />Os dados podem ser processados ou armazenados em servidores fora do Brasil. Nesses casos, adotamos medidas para garantir que a transferência observe os requisitos da LGPD, incluindo a garantia de um nível adequado de proteção de dados.</p>
-          <p><strong>13. Atualizações desta Política</strong><br />Esta Política poderá ser atualizada para refletir mudanças na legislação ou na forma como tratamos dados pessoais. Notificaremos os Usuários sobre alterações significativas por meio do Site.</p>
-          <p><strong>14. Contato</strong><br />Para esclarecer dúvidas, exercer direitos ou fazer solicitações relacionadas a esta Política, entre em contato com o encarregado de dados da AI TRON:<br />E-mail: privacidade@aitron.com.br<br />Endereço: residente à Rua Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44052-171, e-mail: suporte@aitron.com.br, telefone: .<br />Telefone: (11) 91923-5181.</p>
-        </div>
+      <main className='container mx-auto px-4 pt-40 pb-20 max-w-4xl'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className='text-4xl md:text-5xl font-bold mb-4 text-gradient'>TERMOS DE USO</h1>
+          <p className="text-muted-foreground mb-10">Última atualização: 12/01/2026</p>
+
+          <div className='prose prose-invert max-w-none space-y-12 text-muted-foreground leading-relaxed'>
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>1. Identificação do Responsável</h2>
+              <p>Este site e os serviços disponibilizados por meio dele (“Serviços”) são operados por:</p>
+              <p className="mt-4 font-medium text-foreground">
+                FABIO SANTOS DIAS (ME), inscrita no CNPJ nº 12.637.261/0001-67, com sede na R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171 (“AITRON”, “nós”).<br/>
+                Contato: <a href="mailto:contato@airtron.com.br" className="text-primary hover:underline">contato@airtron.com.br</a>
+              </p>
+            </section>
+
+            <section className="p-8">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>2. Aceitação dos Termos</h2>
+              <p>Ao acessar, navegar ou utilizar este site e/ou quaisquer Serviços, você (“Usuário”) declara que leu, compreendeu e concorda com estes Termos de Uso e com a Política de Privacidade. Se você não concordar com estes Termos, por favor, não utilize o site nem os Serviços.</p>
+            </section>
+
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>3. Definições</h2>
+              <ul className="list-none space-y-4">
+                <li><strong>Site:</strong> páginas e conteúdos hospedados sob o domínio/ambiente oficial da AITRON.</li>
+                <li><strong>Serviços:</strong> consultoria, automações, chatbots, agentes de IA, integrações, suporte e demais soluções descritas no Site.</li>
+                <li><strong>Conteúdo:</strong> textos, marcas, layouts, imagens, vídeos, códigos, materiais e informações disponibilizados pela AITRON.</li>
+              </ul>
+            </section>
+
+            <section className="p-8">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>4. Elegibilidade e Uso do Site</h2>
+              <p>O Usuário declara ter capacidade civil para aceitar estes Termos e utilizar o Site conforme a legislação aplicável. O uso do Site deve ocorrer apenas para finalidades lícitas e de acordo com estes Termos.</p>
+            </section>
+
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>5. Descrição dos Serviços e Propostas</h2>
+              <p>Os conteúdos do Site possuem caráter informativo e podem apresentar exemplos, estimativas, demonstrações e descrições gerais. Propostas comerciais, prazos, escopo, valores e entregas serão definidos em documento próprio (ex.: proposta/contrato), quando aplicável.</p>
+            </section>
+
+            <section className="p-8 border-l-4 border-primary bg-primary/5 rounded-r-2xl">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>6. Comunicação e Contato</h2>
+              <p>Ao preencher formulários, solicitar orçamento ou entrar em contato (incluindo via WhatsApp), o Usuário autoriza o recebimento de comunicações relacionadas ao atendimento da solicitação, conforme descrito na Política de Privacidade. O Usuário pode solicitar a interrupção de comunicações promocionais a qualquer momento.</p>
+            </section>
+
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>7. Regras de Uso e Condutas Proibidas</h2>
+              <p className="mb-4">É vedado ao Usuário:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Violar leis, regulamentos e direitos de terceiros;</li>
+                <li>Inserir conteúdo ilegal, ofensivo, difamatório, discriminatório ou que viole direitos autorais/marca;</li>
+                <li>Tentar acessar áreas restritas, contornar medidas de segurança, introduzir malware, explorar falhas, realizar engenharia reversa indevida;</li>
+                <li>Utilizar o Site para enviar spam ou coletar dados de terceiros sem base legal.</li>
+              </ul>
+            </section>
+
+            <section className="p-8">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>8. Propriedade Intelectual</h2>
+              <p>Todo o Conteúdo do Site (incluindo marca, identidade visual, textos, layout, materiais e códigos) é de propriedade da AITRON ou licensed a ela, sendo protegido por legislação aplicável. É proibida a reprodução, distribuição, modificação ou uso comercial do Conteúdo sem autorização prévia e expressa.</p>
+            </section>
+
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>9. Conteúdo Enviado pelo Usuário</h2>
+              <p>Ao enviar informações por formulários, e-mails ou canais de contato, o Usuário declara possuir os direitos necessários e ser responsável pela veracidade do conteúdo. O Usuário concorda em não enviar informações de terceiros sem autorização e/ou sem base legal adequada.</p>
+            </section>
+
+            <section className="p-8">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>10. Links e Serviços de Terceiros</h2>
+              <p>O Site pode conter links ou integrações com serviços de terceiros (ex.: WhatsApp, Meta, ferramentas de analytics, hospedagem). A AITRON não se responsabiliza por políticas, práticas, conteúdo ou funcionamento desses terceiros. O uso estará sujeito aos termos e políticas deles.</p>
+            </section>
+
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>11. Isenção de Garantias</h2>
+              <p>A AITRON envida esforços para manter o Site seguro, estável e atualizado, porém não garante que o Site funcionará sem interrupções, erros ou falhas; o conteúdo será sempre completo ou atualizado em tempo real; ou que a navegação estará livre de ataques ou incidentes inevitáveis.</p>
+            </section>
+
+            <section className="p-8">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>12. Limitação de Responsabilidade</h2>
+              <p>Na máxima extensão permitida pela lei, a AITRON não será responsável por danos indiretos, lucros cessantes, perda de oportunidades ou prejuízos decorrentes do uso/indisponibilidade do Site; falhas decorrentes de terceiros, provedores, internet, integrações externas ou caso fortuito/força maior.</p>
+            </section>
+
+            <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm text-center">
+              <h2 className='text-2xl font-semibold text-primary mb-4'>16. Lei Aplicável e Foro</h2>
+              <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de <strong>Feira de Santana/BA</strong>, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
+            </section>
+
+            <div className="flex flex-col items-center pt-10 border-t border-border">
+              <p className="text-foreground font-semibold mb-4">Dúvidas sobre estes Termos?</p>
+              <a href="mailto:contato@airtron.com.br">
+                <Button variant="outline">contato@airtron.com.br</Button>
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </main>
       <Footer />
       <FloatingWhatsApp />
-      <CookieConsent />
     </div>
   );
 }

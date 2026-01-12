@@ -117,7 +117,7 @@ const Header = () => {
             Benefícios
           </a>
           <a
-            href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
+            href='https://wa.me/55119962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -161,7 +161,7 @@ const Header = () => {
                 Benefícios
               </a>
               <a
-                href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
+                href='https://wa.me/55119962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -639,16 +639,19 @@ const Footer = () => {
 
         <div className='text-center border-t border-border pt-8'>
           <p className='text-muted-foreground text-sm mb-2'>
-            © 2024 AI TRON. Todos os direitos reservados.
+            © 2026 AI TRON. Todos os direitos reservados.
           </p>
           <p className='text-muted-foreground text-xs'>
             Desenvolvido com tecnologia de ponta para impulsionar seu negócio.
           </p>
-          <p className='mt-2'>
+          <div className='mt-2 flex justify-center space-x-4'>
             <a href='/termos' className='text-primary hover:underline'>
-              Termos e Condições
+              Termos de Uso
             </a>
-          </p>
+            <a href='/politica-privacidade' className='text-primary hover:underline'>
+              Política de Privacidade
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -874,7 +877,7 @@ const RevolutionSection = () => {
           className='mb-12'
         >
           <a
-            href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
+            href='https://wa.me/55119962684780?text=Olá, desejo solicitar uma proposta para as soluções de IA da Aitron.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -983,10 +986,13 @@ const CookieConsent = () => {
       className='fixed bottom-32 md:bottom-24 left-4 right-4 bg-card p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between z-50'
     >
       <p className='text-sm text-muted-foreground mb-4 md:mb-0 md:mr-4'>
-        Utilizamos cookies para melhorar sua experiência de navegação e analisar
-        o tráfego do site. Ao continuar, você concorda com nossa
-        <a href='/termos' className='text-primary underline ml-1'>
-          política de privacidade e termos
+        Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossos
+        <a href='/termos' className='text-primary underline mx-1'>
+          Termos
+        </a>
+        e nossa
+        <a href='/politica-privacidade' className='text-primary underline ml-1'>
+          Política de Privacidade
         </a>
         .
       </p>
@@ -1000,7 +1006,7 @@ const CookieConsent = () => {
 // Botão flutuante do WhatsApp
 const FloatingWhatsApp = () => (
   <motion.a
-    href='https://wa.me/5511919235181?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Estou%20interessado%28a%29%20em%20fazer%20um%20or%C3%A7amento.%20Poderia%20me%20passar%20as%20informa%C3%A7%C3%B5es%3F'
+    href='https://wa.me/55119962684780?text=Olá, quero saber mais sobre as soluções de IA da Aitron.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'

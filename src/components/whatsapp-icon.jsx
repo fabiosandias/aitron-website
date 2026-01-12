@@ -11,7 +11,7 @@ function WhatsappIcon({ size = 28, className = "" }) {
       focusable="false"
     >
       <path
-        fill="#25D366"
+        fill="white"
         d="M16 0C7.163 0 0 7.163 0 16c0 2.76.75 5.345 2.052 7.584L0 32l8.6-2.287A15.94 15.94 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"
       />
       <path
@@ -23,3 +23,4 @@ function WhatsappIcon({ size = 28, className = "" }) {
 }
 
 export { WhatsappIcon }
+  
