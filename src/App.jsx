@@ -603,10 +603,10 @@ const Footer = () => {
             <p className='text-muted-foreground text-sm flex items-center space-x-2'>
               <Mail className='w-4 h-4' />
               <a
-                href='mailto:contato@aitron.com.br'
+                href='mailto:suporte@aitron.com.br'
                 className='hover:underline cursor-pointer'
               >
-                contato@aitron.com.br
+                suporte@aitron.com.br
               </a>
             </p>
           </div>

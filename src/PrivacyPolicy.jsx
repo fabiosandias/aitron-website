@@ -77,10 +77,10 @@ const Footer = () => {
           <p className='text-muted-foreground text-xs mb-4'>Desenvolvido com tecnologia de ponta para impulsionar seu negócio.</p>
           
           <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
-            <p><strong>Razão Social:</strong> FABIO SANTOS DIAS (ME)</p>
-            <p><strong>CNPJ:</strong> 12.637.261/0001-67</p>
-            <p><strong>Endereço:</strong> R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171</p>
-            <p><strong>E-mail:</strong> contato@airtron.com.br</p>
+            <p><strong>Razão Social:</strong> SAMUEL SANTOS SOUZA DIAS (ME)</p>
+            <p><strong>CNPJ:</strong> 65.146.032/0001-45</p>
+            <p><strong>Endereço:</strong> R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380</p>
+            <p><strong>E-mail:</strong> suporte@aitron.com.br</p>
           </div>
 
           <div className='flex justify-center space-x-4'>
@@ -167,10 +167,10 @@ function PrivacyPolicy() {
               <h2 className='text-2xl font-semibold text-primary mb-4'>1. Quem somos (Controlador)</h2>
               <p>A AITRON é o nome fantasia/serviço operado por:</p>
               <p className="mt-4 font-medium text-foreground">
-                FABIO SANTOS DIAS (ME)<br/>
-                CNPJ: 12.637.261/0001-67<br/>
-                Endereço: R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171<br/>
-                E-mail de contato (Privacidade): <a href="mailto:contato@airtron.com.br" className="text-primary hover:underline">contato@airtron.com.br</a>
+                SAMUEL SANTOS SOUZA DIAS (ME)<br/>
+                CNPJ: 65.146.032/0001-45<br/>
+                Endereço: R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380<br/>
+                E-mail de contato (Privacidade): <a href="mailto:suporte@aitron.com.br" className="text-primary hover:underline">suporte@aitron.com.br</a>
               </p>
             </section>
 
@@ -251,7 +251,7 @@ function PrivacyPolicy() {
               <h2 className='text-2xl font-semibold text-primary mb-4'>12. Instruções de exclusão de dados (Meta/WhatsApp)</h2>
               <p className="mb-6">Se você deseja solicitar a exclusão de dados relacionados ao atendimento/integrações:</p>
               <ol className="list-decimal pl-6 space-y-3">
-                <li>Envie um e-mail para <a href="mailto:contato@airtron.com.br" className="text-primary hover:underline font-bold">contato@airtron.com.br</a></li>
+                <li>Envie um e-mail para <a href="mailto:suporte@aitron.com.br" className="text-primary hover:underline font-bold">suporte@aitron.com.br</a></li>
                 <li>Assunto: <strong>Exclusão de Dados — Meta/WhatsApp</strong></li>
                 <li>Informe o número de telefone utilizado e detalhes do atendimento.</li>
               </ol>
@@ -260,8 +260,8 @@ function PrivacyPolicy() {
 
             <div className="flex flex-col items-center pt-10 border-t border-border">
               <p className="text-foreground font-semibold mb-2">Encarregado de Dados (DPO)</p>
-              <p className="text-sm mb-6">Fábio Santos Dias</p>
-              <a href="mailto:contato@airtron.com.br">
+              <p className="text-sm mb-6">Samuel Santos Souza Dias</p>
+              <a href="mailto:suporte@aitron.com.br">
                 <Button>Exercer Meus Direitos</Button>
               </a>
             </div>

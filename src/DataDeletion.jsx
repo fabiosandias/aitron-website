@@ -71,7 +71,7 @@ function DataDeletion() {
           
           <div className='bg-background/50 p-6 rounded-2xl border border-border text-left mb-8'>
             <p className='mb-4 italic'>Envie um e-mail para o nosso Encarregado de Dados:</p>
-            <p className='text-primary font-bold text-xl mb-4'>contato@airtron.com.br</p>
+            <p className='text-primary font-bold text-xl mb-4'>suporte@aitron.com.br</p>
             <ul className='space-y-2 text-sm text-muted-foreground'>
               <li>• Assunto: <strong>Exclusão de Dados — Meta/WhatsApp</strong></li>
               <li>• Informe seu <strong>número de WhatsApp</strong> (com DDD)</li>
@@ -83,7 +83,7 @@ function DataDeletion() {
             Nosso prazo de resposta e execução é de até <strong>5 dias úteis</strong>. Confirmaremos via e-mail assim que o processo for concluído em nossos bancos de dados.
           </p>
 
-          <a href="mailto:contato@airtron.com.br">
+          <a href="mailto:suporte@aitron.com.br">
             <Button size="lg" className="w-full sm:w-auto">Solicitar Exclusão Agora</Button>
           </a>
         </motion.div>

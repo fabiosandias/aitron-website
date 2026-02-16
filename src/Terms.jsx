@@ -77,10 +77,10 @@ const Footer = () => {
           <p className='text-muted-foreground text-xs mb-4'>Desenvolvido com tecnologia de ponta para impulsionar seu negócio.</p>
           
           <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
-            <p><strong>Razão Social:</strong> FABIO SANTOS DIAS (ME)</p>
-            <p><strong>CNPJ:</strong> 12.637.261/0001-67</p>
-            <p><strong>Endereço:</strong> R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171</p>
-            <p><strong>E-mail:</strong> contato@airtron.com.br</p>
+            <p><strong>Razão Social:</strong> SAMUEL SANTOS SOUZA DIAS (ME)</p>
+            <p><strong>CNPJ:</strong> 65.146.032/0001-45</p>
+            <p><strong>Endereço:</strong> R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380</p>
+            <p><strong>E-mail:</strong> suporte@aitron.com.br</p>
           </div>
 
           <div className='flex justify-center space-x-4'>
@@ -127,17 +127,17 @@ function Terms() {
 
           <div className='prose prose-invert max-w-none space-y-12 text-muted-foreground leading-relaxed'>
             <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
-              <h2 className='text-2xl font-semibold text-primary mb-4'>1. Identificação do Responsável</h2>
-              <p>Este site e os serviços disponibilizados por meio dele (“Serviços”) são operados por:</p>
+              <h2 className='text-2xl font-semibold text-primary mb-4'>1. Identificao do Responsvel</h2>
+              <p>Este site e os servios disponibilizados por meio dele (Servios) so operados por:</p>
               <p className="mt-4 font-medium text-foreground">
-                FABIO SANTOS DIAS (ME), inscrita no CNPJ nº 12.637.261/0001-67, com sede na R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171 (“AITRON”, “nós”).<br/>
-                Contato: <a href="mailto:contato@airtron.com.br" className="text-primary hover:underline">contato@airtron.com.br</a>
+                SAMUEL SANTOS SOUZA DIAS (ME), inscrita no CNPJ n 65.146.032/0001-45, com sede na R. Dona Tecla, n 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380 (AITRON, ns).<br/>
+                Contato: <a href="mailto:suporte@aitron.com.br" className="text-primary hover:underline">suporte@aitron.com.br</a>
               </p>
             </section>
 
             <section className="p-8">
-              <h2 className='text-2xl font-semibold text-primary mb-4'>2. Aceitação dos Termos</h2>
-              <p>Ao acessar, navegar ou utilizar este site e/ou quaisquer Serviços, você (“Usuário”) declara que leu, compreendeu e concorda com estes Termos de Uso e com a Política de Privacidade. Se você não concordar com estes Termos, por favor, não utilize o site nem os Serviços.</p>
+              <h2 className='text-2xl font-semibold text-primary mb-4'>2. Aceitao dos Termos</h2>
+              <p>Ao acessar, navegar ou utilizar este site e/ou quaisquer Servios, voc (Usurio) declara que leu, compreendeu e concorda com estes Termos de Uso e com a Poltica de Privacidade. Se voc no concordar com estes Termos, por favor, no utilize o site nem os Servios.</p>
             </section>
 
             <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
@@ -207,8 +207,8 @@ function Terms() {
 
             <div className="flex flex-col items-center pt-10 border-t border-border">
               <p className="text-foreground font-semibold mb-4">Dúvidas sobre estes Termos?</p>
-              <a href="mailto:contato@airtron.com.br">
-                <Button variant="outline">contato@airtron.com.br</Button>
+              <a href="mailto:suporte@aitron.com.br">
+                <Button variant="outline">suporte@aitron.com.br</Button>
               </a>
             </div>
           </div>
