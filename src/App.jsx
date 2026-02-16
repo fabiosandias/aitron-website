@@ -117,7 +117,7 @@ const Header = () => {
             Benefícios
           </a>
           <a
-            href='https://wa.me/55119962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
+            href='https://wa.me/5511962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -161,7 +161,7 @@ const Header = () => {
                 Benefícios
               </a>
               <a
-                href='https://wa.me/55119962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
+                href='https://wa.me/5511962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -641,10 +641,18 @@ const Footer = () => {
           <p className='text-muted-foreground text-sm mb-2'>
             © 2026 AI TRON. Todos os direitos reservados.
           </p>
-          <p className='text-muted-foreground text-xs'>
+          <p className='text-muted-foreground text-xs mb-4'>
             Desenvolvido com tecnologia de ponta para impulsionar seu negócio.
           </p>
-          <div className='mt-2 flex justify-center space-x-4'>
+
+          <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
+            <p><strong>Razão Social:</strong> 65.146.032 SAMUEL SANTOS SOUZA DIAS</p>
+            <p><strong>CNPJ:</strong> 65.146.032/0001-45</p>
+            <p><strong>Endereço:</strong> R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380</p>
+            <p><strong>E-mail:</strong> suporte@aitron.com.br</p>
+          </div>
+
+          <div className='flex justify-center space-x-4'>
             <a href='/termos' className='text-primary hover:underline'>
               Termos de Uso
             </a>
@@ -877,7 +885,7 @@ const RevolutionSection = () => {
           className='mb-12'
         >
           <a
-            href='https://wa.me/55119962684780?text=Olá, desejo solicitar uma proposta para as soluções de IA da Aitron.'
+            href='https://wa.me/5511962684780?text=Olá, desejo solicitar uma proposta para as soluções de IA da Aitron.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -1006,7 +1014,7 @@ const CookieConsent = () => {
 // Botão flutuante do WhatsApp
 const FloatingWhatsApp = () => (
   <motion.a
-    href='https://wa.me/55119962684780?text=Olá, quero saber mais sobre as soluções de IA da Aitron.'
+    href='https://wa.me/5511962684780?text=Olá, quero saber mais sobre as soluções de IA da Aitron.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'

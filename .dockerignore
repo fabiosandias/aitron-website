@@ -7,4 +7,3 @@ dist
 .idea
 docker-compose.yml
 Dockerfile
-nginx
