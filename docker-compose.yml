@@ -5,7 +5,19 @@ services:
       dockerfile: Dockerfile
     container_name: aitron-website
     restart: unless-stopped
-    ports:
-      - "3080:80"
     environment:
       - TZ=America/Sao_Paulo
+    networks:
+      - traefik_public
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aitron.rule=Host(`aitron.com.br`) || Host(`www.aitron.com.br`)"
+      - "traefik.http.routers.aitron.entrypoints=web,websecure"
+      - "traefik.http.routers.aitron.tls=true"
+      - "traefik.http.routers.aitron.tls.certresolver=letsencrypt"
+      - "traefik.http.services.aitron.loadbalancer.server.port=80"
+
+networks:
+  traefik_public:
+    external: true
+    name: infra-n8n-chatmega
