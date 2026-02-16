@@ -1,23 +1,21 @@
 services:
   aitron-web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: aitron-website
-    restart: unless-stopped
+    image: aitron-website:latest
     environment:
       - TZ=America/Sao_Paulo
     networks:
-      - traefik_public
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.aitron.rule=Host(`aitron.com.br`) || Host(`www.aitron.com.br`)"
-      - "traefik.http.routers.aitron.entrypoints=web,websecure"
-      - "traefik.http.routers.aitron.tls=true"
-      - "traefik.http.routers.aitron.tls.certresolver=letsencrypt"
-      - "traefik.http.services.aitron.loadbalancer.server.port=80"
+      - infra-n8n-chatmega
+    deploy:
+      mode: replicated
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.aitron.rule=Host(`aitron.com.br`) || Host(`www.aitron.com.br`)"
+        - "traefik.http.routers.aitron.entrypoints=websecure"
+        - "traefik.http.routers.aitron.tls=true"
+        - "traefik.http.routers.aitron.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.aitron.loadbalancer.server.port=80"
 
 networks:
-  traefik_public:
+  infra-n8n-chatmega:
     external: true
-    name: infra-n8n-chatmega
