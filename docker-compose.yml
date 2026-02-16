@@ -12,9 +12,10 @@ services:
         - "traefik.enable=true"
         - "traefik.http.routers.aitron.rule=Host(`aitron.com.br`) || Host(`www.aitron.com.br`)"
         - "traefik.http.routers.aitron.entrypoints=websecure"
-        - "traefik.http.routers.aitron.tls=true"
+        - "traefik.http.routers.aitron.service=aitron"
         - "traefik.http.routers.aitron.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.aitron.loadbalancer.server.port=80"
+        - "traefik.http.services.aitron.loadbalancer.passHostHeader=true"
 
 networks:
   infra-n8n-chatmega:
