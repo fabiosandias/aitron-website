@@ -117,7 +117,7 @@ const Header = () => {
             Benefícios
           </a>
           <a
-            href='https://wa.me/5511962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
+            href='https://wa.me/5511984479440?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -161,7 +161,7 @@ const Header = () => {
                 Benefícios
               </a>
               <a
-                href='https://wa.me/5511962684780?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
+                href='https://wa.me/5511984479440?text=Olá, desejo solicitar um orçamento para as soluções de IA da Aitron.'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -646,9 +646,10 @@ const Footer = () => {
           </p>
 
           <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
-            <p><strong>Razão Social:</strong> 65.146.032 SAMUEL SANTOS SOUZA DIAS</p>
-            <p><strong>CNPJ:</strong> 65.146.032/0001-45</p>
-            <p><strong>Endereço:</strong> R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380</p>
+            <p><strong>Razão Social:</strong> FABIO SANTOS DIAS</p>
+            <p><strong>CNPJ:</strong> 42.637.261/0001-67</p>
+            <p><strong>Endereço:</strong> R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171</p>
+            <p><strong>Telefone:</strong> (11) 98447-9440</p>
             <p><strong>E-mail:</strong> suporte@aitron.com.br</p>
           </div>
 
@@ -885,7 +886,7 @@ const RevolutionSection = () => {
           className='mb-12'
         >
           <a
-            href='https://wa.me/5511962684780?text=Olá, desejo solicitar uma proposta para as soluções de IA da Aitron.'
+            href='https://wa.me/5511984479440?text=Olá, desejo solicitar uma proposta para as soluções de IA da Aitron.'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -1014,7 +1015,7 @@ const CookieConsent = () => {
 // Botão flutuante do WhatsApp
 const FloatingWhatsApp = () => (
   <motion.a
-    href='https://wa.me/5511962684780?text=Olá, quero saber mais sobre as soluções de IA da Aitron.'
+    href='https://wa.me/5511984479440?text=Olá, quero saber mais sobre as soluções de IA da Aitron.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
