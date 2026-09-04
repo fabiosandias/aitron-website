@@ -7,3 +7,6 @@ dist
 .idea
 docker-compose.yml
 Dockerfile
+.env
+.env.*
+recon-deploy.sh
