@@ -77,9 +77,10 @@ const Footer = () => {
           <p className='text-muted-foreground text-xs mb-4'>Desenvolvido com tecnologia de ponta para impulsionar seu negócio.</p>
           
           <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
-            <p><strong>Razão Social:</strong> 65.146.032 SAMUEL SANTOS SOUZA DIAS</p>
-            <p><strong>CNPJ:</strong> 65.146.032/0001-45</p>
-            <p><strong>Endereço:</strong> R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380</p>
+            <p><strong>Razão Social:</strong> FABIO SANTOS DIAS</p>
+            <p><strong>CNPJ:</strong> 42.637.261/0001-67</p>
+            <p><strong>Endereço:</strong> R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171</p>
+            <p><strong>Telefone:</strong> (11) 98447-9440</p>
             <p><strong>E-mail:</strong> suporte@aitron.com.br</p>
           </div>
 
@@ -95,7 +96,7 @@ const Footer = () => {
 
 const FloatingWhatsApp = () => (
   <motion.a
-    href='https://wa.me/5511962684780?text=Olá, desejo saber mais sobre as soluções de IA da Aitron.'
+    href='https://wa.me/5511984479440?text=Olá, desejo saber mais sobre as soluções de IA da Aitron.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
@@ -123,21 +124,22 @@ function Terms() {
           transition={{ duration: 0.5 }}
         >
           <h1 className='text-4xl md:text-5xl font-bold mb-4 text-gradient'>TERMOS DE USO</h1>
-          <p className="text-muted-foreground mb-10">Última atualização: 12/01/2026</p>
+          <p className="text-muted-foreground mb-10">Última atualização: 04/09/2026</p>
 
           <div className='prose prose-invert max-w-none space-y-12 text-muted-foreground leading-relaxed'>
             <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
-              <h2 className='text-2xl font-semibold text-primary mb-4'>1. Identificao do Responsvel</h2>
-              <p>Este site e os servios disponibilizados por meio dele (Servios) so operados por:</p>
+              <h2 className='text-2xl font-semibold text-primary mb-4'>1. Identificação do Responsável</h2>
+              <p>Este site e os serviços disponibilizados por meio dele (“Serviços”) são operados por:</p>
               <p className="mt-4 font-medium text-foreground">
-                65.146.032 SAMUEL SANTOS SOUZA DIAS, inscrita no CNPJ n 65.146.032/0001-45, com sede na R. Dona Tecla, n 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380 (AITRON, ns).<br/>
+                FABIO SANTOS DIAS, inscrito no CNPJ nº 42.637.261/0001-67, com sede na R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171 (“AITRON”, “nós”).<br/>
+                Telefone: (11) 98447-9440<br/>
                 Contato: <a href="mailto:suporte@aitron.com.br" className="text-primary hover:underline">suporte@aitron.com.br</a>
               </p>
             </section>
 
             <section className="p-8">
-              <h2 className='text-2xl font-semibold text-primary mb-4'>2. Aceitao dos Termos</h2>
-              <p>Ao acessar, navegar ou utilizar este site e/ou quaisquer Servios, voc (Usurio) declara que leu, compreendeu e concorda com estes Termos de Uso e com a Poltica de Privacidade. Se voc no concordar com estes Termos, por favor, no utilize o site nem os Servios.</p>
+              <h2 className='text-2xl font-semibold text-primary mb-4'>2. Aceitação dos Termos</h2>
+              <p>Ao acessar, navegar ou utilizar este site e/ou quaisquer Serviços, você (“Usuário”) declara que leu, compreendeu e concorda com estes Termos de Uso e com a Política de Privacidade. Se você não concordar com estes Termos, por favor, não utilize o site nem os Serviços.</p>
             </section>
 
             <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
@@ -177,7 +179,7 @@ function Terms() {
 
             <section className="p-8">
               <h2 className='text-2xl font-semibold text-primary mb-4'>8. Propriedade Intelectual</h2>
-              <p>Todo o Conteúdo do Site (incluindo marca, identidade visual, textos, layout, materiais e códigos) é de propriedade da AITRON ou licensed a ela, sendo protegido por legislação aplicável. É proibida a reprodução, distribuição, modificação ou uso comercial do Conteúdo sem autorização prévia e expressa.</p>
+              <p>Todo o Conteúdo do Site (incluindo marca, identidade visual, textos, layout, materiais e códigos) é de propriedade da AITRON ou licenciado a ela, sendo protegido por legislação aplicável. É proibida a reprodução, distribuição, modificação ou uso comercial do Conteúdo sem autorização prévia e expressa.</p>
             </section>
 
             <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">

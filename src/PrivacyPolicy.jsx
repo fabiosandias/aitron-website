@@ -77,9 +77,10 @@ const Footer = () => {
           <p className='text-muted-foreground text-xs mb-4'>Desenvolvido com tecnologia de ponta para impulsionar seu negócio.</p>
           
           <div className='bg-card/30 p-4 rounded-lg border border-border/50 text-left max-w-2xl mx-auto mb-6 text-xs text-muted-foreground'>
-            <p><strong>Razão Social:</strong> 65.146.032 SAMUEL SANTOS SOUZA DIAS</p>
-            <p><strong>CNPJ:</strong> 65.146.032/0001-45</p>
-            <p><strong>Endereço:</strong> R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380</p>
+            <p><strong>Razão Social:</strong> FABIO SANTOS DIAS</p>
+            <p><strong>CNPJ:</strong> 42.637.261/0001-67</p>
+            <p><strong>Endereço:</strong> R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171</p>
+            <p><strong>Telefone:</strong> (11) 98447-9440</p>
             <p><strong>E-mail:</strong> suporte@aitron.com.br</p>
           </div>
 
@@ -134,7 +135,7 @@ const CookieConsent = () => {
 
 const FloatingWhatsApp = () => (
   <motion.a
-    href='https://wa.me/5511962684780?text=Olá, desejo saber mais sobre a segurança de dados na Aitron.'
+    href='https://wa.me/5511984479440?text=Olá, desejo saber mais sobre a segurança de dados na Aitron.'
     target='_blank'
     rel='noopener noreferrer'
     aria-label='Conversar no WhatsApp'
@@ -160,16 +161,17 @@ function PrivacyPolicy() {
           transition={{ duration: 0.5 }}
         >
           <h1 className='text-4xl md:text-5xl font-bold mb-4 text-gradient'>POLÍTICA DE PRIVACIDADE</h1>
-          <p className="text-muted-foreground mb-10">Última atualização: 12/01/2026</p>
+          <p className="text-muted-foreground mb-10">Última atualização: 04/09/2026</p>
 
           <div className='prose prose-invert max-w-none space-y-12 text-muted-foreground leading-relaxed'>
             <section className="bg-card/30 p-8 rounded-2xl border border-border/50 backdrop-blur-sm">
               <h2 className='text-2xl font-semibold text-primary mb-4'>1. Quem somos (Controlador)</h2>
               <p>A AITRON é o nome fantasia/serviço operado por:</p>
               <p className="mt-4 font-medium text-foreground">
-                65.146.032 SAMUEL SANTOS SOUZA DIAS<br/>
-                CNPJ: 65.146.032/0001-45<br/>
-                Endereço: R. Dona Tecla, nº 230, Bairro Jardim Flor da Montanha, Guarulhos/SP, CEP 07.097-380<br/>
+                FABIO SANTOS DIAS<br/>
+                CNPJ: 42.637.261/0001-67<br/>
+                Endereço: R. Serranópolis, nº 09, Letra A, Bairro Caseb, Feira de Santana/BA, CEP 44.052-171<br/>
+                Telefone: (11) 98447-9440<br/>
                 E-mail de contato (Privacidade): <a href="mailto:suporte@aitron.com.br" className="text-primary hover:underline">suporte@aitron.com.br</a>
               </p>
             </section>
@@ -260,7 +262,7 @@ function PrivacyPolicy() {
 
             <div className="flex flex-col items-center pt-10 border-t border-border">
               <p className="text-foreground font-semibold mb-2">Encarregado de Dados (DPO)</p>
-              <p className="text-sm mb-6">Samuel Santos Souza Dias</p>
+              <p className="text-sm mb-6">Fabio Santos Dias</p>
               <a href="mailto:suporte@aitron.com.br">
                 <Button>Exercer Meus Direitos</Button>
               </a>
